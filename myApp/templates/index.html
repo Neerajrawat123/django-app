@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        --> <!-- <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">end_year</th>
+            <th scope="col">intensity</th>
+            <th scope="col">sector</th>
+            <th scope="col">topic</th>
+            <th scope="col">insight</th>
+            <th scope="col">url</th>
+            <th scope="col">region</th>
+            <th scope="col">added</th>
+            <th scope="col">country</th>
+            <th scope="col">relevance</th>
+            <th scope="col">source</th>
+      
+      
+          </tr>
+        </thead>
+        <tbody>
+            {% for res in data %}
+            <tr>
+                <th scope="row">{{ forloop.counter }}</th>
+
+                <td>{{res.end_year}}</td>
+                <td>{{res.intensity}}</td>
+
+                <td>{{res.sector}}</td>
+                <td>{{res.topic}}</td>
+                <td>{{res.insight}}</td>
+                <td>{{res.url}}</td>
+                <td>{{res.region}}</td>
+                <td>{{res.added}}</td>
+                <td>{{res.country}}</td>
+                <td>{{res.relevance}}</td>
+                <td>{{res.source}}</td>
+
+      
+      
+                
+      
+              </tr>            
+            {% endfor %}
+         
+         
+        </tbody>
+      </table> -->
+      <ul>
+        {% for obj in data %}
+        <li>
+            <p>ResearchData object ({{ forloop.counter }}):</p>
+            <p>ID: {{ obj.id }}</p>
+            <p>Attribute1: {{ obj.end_year}}</p>
+            <p>Attribute2: {{ obj.sector }}</p>
+            <!-- Add more attributes as needed -->
+        </li>
+        {% endfor %}
+    </ul>
+</html>
